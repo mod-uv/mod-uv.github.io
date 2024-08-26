@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos">
+  <meta property="og:title" content="MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos">
+  <meta property="og:description" content="MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos">
+  <meta property="og:image" content="https://mod-uv.github.io/static/images/teaser2.jpg">
+  <meta property="twitter:title" content="MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos">
+  <meta property="twitter:description" content="MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos">
+  <meta property="twitter:image" content="https://mod-uv.github.io/static/images/teaser2.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="monocular, depth estimation, dynamical scenes, motion segmentation, self-supervised">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos</title>
+
+  <!-- Tracking - Please modify for your own website! -->  
+  <!-- Default Statcounter code for mod-uv https://mod-uv.github.io-->
+  <!-- End of Statcounter Code -->
+  <!-- Tracking - Please modify for your own website! -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yihongsun.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://dynamo-depth.github.io">
+            Dynamo-Depth
+          </a>
+          <a class="navbar-item" href="https://mod-uv.github.io">
+            MOD-UV
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navigation Bar -->
+
+<!-- Title/Authors/Institutions/Links -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- Title -->
+          <h1 class="title is-1 publication-title">MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos</h1>
+          <h2 class="title is-size-3">ECCV 2024</h2>
+          <!-- Title -->
+          
+          <!-- Authors -->
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://yihongsun.github.io">Yihong Sun</a>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~bharathh/">Bharath Hariharan</a></span>
+          </div>
+          <!-- Authors -->
+          
+          <!-- Institutions -->
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">Cornell University</span>
+          </div>
+          <!-- Institutions -->
+
+          <!-- PDF Links -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2405.14841.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2405.14841"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://mod-uv.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/YihongSun/MOD-UV"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+          <!-- PDF Links -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Title/Authors/Institutions/Links -->
+
+
+<!-- Teaser Videos -->
+<section class="section">
+  <div class="container"> 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <img class="labels" src="./static/images/teaser.jpg">
+
+        <table style="border-collapse: collapse; width:100%; margin-bottom:10pt;">
+          <tr style="margin: 0; border: 0">
+            <td style="width:50%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">MOD-UV (Ours)</h2></td>
+            <td style="width:50%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">Ground Truth</h2></td>
+          </tr>
+        </table>
+
+        <h2 class="subtitle has-text-centered">MOD-UV only learns from unlabeled videos in the Waymo Open Dataset and can reliably detect and segment mobile objects from a single input image.</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Teaser Videos -->
+
+
+<!-- Main Body -->
+<section class="section">
+  <div class="container">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Embodied agents must detect and localize objects of interest, e.g. traffic participants for self-driving cars. 
+            Supervision in the form of bounding boxes for this task is extremely expensive. 
+            As such, prior work has looked at unsupervised instance detection and segmentation, but in the absence of annotated boxes, it is unclear how pixels must be grouped into objects and which objects are of interest. 
+            This results in over-/under-segmentation and irrelevant objects. 
+          </p>
+          <p>
+            Inspired by human visual system and practical applications, we posit that the key missing cue for unsupervised detection is motion: objects of interest are typically mobile objects that frequently move and their motions can specify separate instances. 
+            In this paper, we propose MOD-UV, a Mobile Object Detector learned from Unlabeled Videos only. We begin with instance pseudo-labels derived from motion segmentation, but introduce a novel training paradigm to progressively discover small objects and static-but-mobile objects that are missed by motion segmentation. 
+            As a result, though only learned from unlabeled videos, MOD-UV can detect and segment mobile objects from a single static image. 
+            Empirically, we achieve state-of-the-art performance in unsupervised mobile object detection on Waymo Open, nuScenes, and KITTI Datasets without using any external data or supervised models.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+    &nbsp;
+
+    <!-- Methodology -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Methodology</h2>
+        <img class="architecture" src="./static/images/pipeline.jpg" alt="">
+
+        <table style="border-collapse: collapse; width:100%; margin-bottom:10pt;">
+          <tr style="margin: 0; border: 0">
+            <td style="width:33%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">Initial Pseudo-Labels</h2></td>
+            <td style="width:34%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">After <em>Moving2Mobile</em></h2></td>
+            <td style="width:33%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">After <em>Large2Small</em></h2></td>
+          </tr>
+        </table>
+
+        <h2 class="subtitle has-text-centered">
+          An overview of the proposed self-training paradigm. 
+          From the initial pseudo-labels generated from motion mask, we first retreive the large static objects after <em>Moving2Mobile</em> and recover the small objects after <em>Large2Small</em>. 
+        </h2>
+      </div>
+    </div>
+    <!--/ Methodology -->
+
+    &nbsp;
+
+    <!-- Paper video -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video (Coming Soon)</h2>
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/NpEaa2P7qZI?si=saPgCZWpOYFTUkuI&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+      </div>
+    </div>
+    <!--/ Paper video -->
+    
+    &nbsp;
+
+    <!-- Qualiatative Results -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <img class="architecture" src="./static/images/qual_waymo.jpeg" alt="">
+
+        <table style="border-collapse: collapse; width:100%; margin-bottom:10pt;">
+          <tr style="margin: 0; border: 0">
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">CutLER (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">HASSOD (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">MOD-UV (Ours)</em></h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">Ground Truth</em></h2></td>
+          </tr>
+        </table>
+
+        <h2 class="subtitle has-text-centered">
+          Visualization results on the Waymo Open Dataset.
+        </h2>
+
+        &nbsp;
+
+        <img class="architecture" src="./static/images/qual_nuscenes.jpeg" alt="">
+
+        <table style="border-collapse: collapse; width:100%; margin-bottom:10pt;">
+          <tr style="margin: 0; border: 0">
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">CutLER (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">HASSOD (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">MOD-UV (Ours)</em></h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">Ground Truth</em></h2></td>
+          </tr>
+        </table>
+
+        <h2 class="subtitle has-text-centered">
+          Visualization results on the nuScenes Dataset.
+        </h2>
+
+        &nbsp;
+
+        <img class="architecture" src="./static/images/qual_kitti.jpeg" alt="">
+
+        <table style="border-collapse: collapse; width:100%; margin-bottom:10pt;">
+          <tr style="margin: 0; border: 0">
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">CutLER (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">HASSOD (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">MOD-UV (Ours)</em></h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">Ground Truth</em></h2></td>
+          </tr>
+        </table>
+
+        <h2 class="subtitle has-text-centered">
+          Visualization results on the KITTI Dataset.
+        </h2>
+
+        &nbsp;
+
+        <img class="architecture" src="./static/images/qual_coco.jpeg" alt="">
+
+        <table style="border-collapse: collapse; width:100%; margin-bottom:10pt;">
+          <tr style="margin: 0; border: 0">
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">CutLER (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">HASSOD (w/ gt filtering)</h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">MOD-UV (Ours)</em></h2></td>
+            <td style="width:25%; padding: 0; margin: 0; border: 0; text-align: middle;"><h2 class="subtitle has-text-centered is-6">Ground Truth</em></h2></td>
+          </tr>
+        </table>
+
+        <h2 class="subtitle has-text-centered">
+          Visualization results on the COCO Dataset.
+        </h2>
+      </div>
+    </div>
+    <!-- Qualiatative Results -->
+
+  </div>
+</section>
+<!-- Main Body -->
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container">
+    <!-- Abstract -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">BibTeX</h2>
+        <pre><code>@inproceedings{sun2024mod,
+  title={MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos}, 
+  author={Yihong Sun and Bharath Hariharan},
+  booktitle={ECCV},
+  year={2024}
+}</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- BibTeX -->
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/mod-uv/mod-uv.github.io" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+
+
+</body>
+</html>
+

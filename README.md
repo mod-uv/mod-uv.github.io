@@ -4,7 +4,7 @@ This is the repository that contains source code for the [MOD-UV website](https:
 
 If you find our work useful please cite:
 <pre>
-@inproceedings{sun2024mod,
+@inproceedings{sun2024moduv,
   title={MOD-UV: Learning Mobile Object Detectors from Unlabeled Videos}, 
   author={Yihong Sun and Bharath Hariharan},
   booktitle={ECCV},
